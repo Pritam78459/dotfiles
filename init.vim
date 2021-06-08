@@ -75,10 +75,35 @@ Plug 'tc50cal/vim-terminal'
 Plug 'jpalardy/vim-slime', { 'for': 'python' }
 Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 Plug 'morhetz/gruvbox'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+Plug 'preservim/tagbar'
 
 
 call plug#end()
+let g:indent_guides_enable_on_vim_startup = 1
 
+" Tag bar
+nmap <F8> :TagbarToggle<CR>
+
+
+
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
+
+" syntastic
+
+set statusline+=%#warningmsg#
+set statusline+=%*
+
+
+" see :h syntastic-loclist-callback
+function! SyntasticCheckHook(errors)
+    if !empty(a:errors)
+        let g:syntastic_loc_list_height = min([len(a:errors), 4])
+    endif
+endfunction
 
 
 "------------------------------------------------------------------------------
@@ -137,7 +162,7 @@ nnoremap <Leader>p :IPythonCellPrevCommand<CR>
 nnoremap <Leader>Q :IPythonCellRestart<CR>
 
 " map <Leader>d to start debug mode
-nnoremap <Leader>d :SlimeSend1 %debug<CR>
+nnoremap <Leader>D :SlimeSend1 %debug<CR>
 
 " map <Leader>q to exit debug mode or IPython
 nnoremap <Leader>q :SlimeSend1 exit<CR>
@@ -280,6 +305,15 @@ endfunction
 colorscheme gruvbox
 set background=dark
 highlight Normal guibg=none
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=grey10
+set ts=4 sw=4 et
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 1
+
+set listchars=tab:\|\ 
+set list
+
 
 " This is the default extra key bindings
 let g:fzf_action = {
