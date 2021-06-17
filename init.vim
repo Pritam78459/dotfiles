@@ -79,6 +79,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'preservim/tagbar'
+Plug 'joshdick/onedark.vim'
 
 
 call plug#end()
@@ -302,7 +303,7 @@ function ToggleMouse()
     endif
 endfunction
 
-colorscheme gruvbox
+colorscheme onedark 
 set background=dark
 highlight Normal guibg=none
 set cursorline
