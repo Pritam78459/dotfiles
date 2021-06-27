@@ -1,4 +1,152 @@
+schemes:
+  # Tokyo Night theme, based on both:
+  #   https://github.com/ghifarit53/tokyonight-vim
+  #   https://github.com/enkia/tokyo-night-vscode-theme
+  tokyo-night: &tokyo-night
+    # Default colors
+    primary:
+      background: '0x1a1b26'
+      foreground: '0xa9b1d6'
+
+    # Normal colors
+    normal:
+      black:   '0x32344a'
+      red:     '0xf7768e'
+      green:   '0x9ece6a'
+      yellow:  '0xe0af68'
+      blue:    '0x7aa2f7'
+      magenta: '0xad8ee6'
+      cyan:    '0x449dab'
+      white:   '0x787c99'
+
+    # Bright colors
+    bright:
+      black:   '0x444b6a'
+      red:     '0xff7a93'
+      green:   '0xb9f27c'
+      yellow:  '0xff9e64'
+      blue:    '0x7da6ff'
+      magenta: '0xbb9af7'
+      cyan:    '0x0db9d7'
+      white:   '0xacb0d0'
+
+  tokyo-night-storm: &tokyo-night-storm
+    # Default colors
+    primary:
+      background: '0x24283b'
+      foreground: '0xa9b1d6'
+
+    # Normal colors
+    normal:
+      black:   '0x32344a'
+      red:     '0xf7768e'
+      green:   '0x9ece6a'
+      yellow:  '0xe0af68'
+      blue:    '0x7aa2f7'
+      magenta: '0xad8ee6'
+      cyan:    '0x449dab'
+      white:   '0x9699a8'
+
+    # Bright colors
+    bright:
+      black:   '0x444b6a'
+      red:     '0xff7a93'
+      green:   '0xb9f27c'
+      yellow:  '0xff9e64'
+      blue:    '0x7da6ff'
+      magenta: '0xbb9af7'
+      cyan:    '0x0db9d7'
+      white:   '0xacb0d0'
+
+  challenger-deep: &challenger-deep
+    
+    primary:
+      background: '0x1b182c'
+      foreground: '0xcbe3e7'
+
+    # Normal colors
+    normal:
+      black:   '0x100e23'
+      red:     '0xff8080'
+      green:   '0x95ffa4'
+      yellow:  '0xffe9aa'
+      blue:    '0x91ddff'
+      magenta: '0xc991e1'
+      cyan:    '0xaaffe4'
+      white:   '0xcbe3e7'
+
+    # Bright colors
+    bright:
+      black:   '0x565575'
+      red:     '0xff5458'
+      green:   '0x62d196'
+      yellow:  '0xffb378'
+      blue:    '0x65b2ff'
+      magenta: '0x906cff'
+      cyan:    '0x63f2f1'
+      white:   '0xa6b3cc'
+
+  gotham: &gotham
+
+    # Default colors
+    primary:
+      background: '0x0a0f14'
+      foreground: '0x98d1ce'
+
+  # Normal colors
+    normal:
+      black: '0x0a0f14'
+      red: '0xc33027'
+      green: '0x26a98b'
+      yellow: '0xedb54b'
+      blue: '0x195465'
+      magenta: '0x4e5165'
+      cyan: '0x33859d'
+      white: '0x98d1ce'
+
+  # Bright colors
+    bright:
+      black: '0x10151b'
+      red: '0xd26939'
+      green: '0x081f2d'
+      yellow: '0x245361'
+      blue: '0x093748'
+      magenta: '0x888ba5'
+      cyan: '0x599caa'
+      white: '0xd3ebe9'
+
+  blue-matrix: &blue-matrix
+
+    bright:
+      black: '#686868'
+      blue: '#6871ff'
+      cyan: '#60fdff'
+      green: '#5ffa68'
+      magenta: '#d682ec'
+      red: '#ff6e67'
+      white: '#ffffff'
+      yellow: '#fffc67'
+    cursor:
+      cursor: '#76ff9f'
+      text: '#ffffff'
+    normal:
+      black: '#101116'
+      blue: '#00b0ff'
+      cyan: '#76c1ff'
+      green: '#00ff9c'
+      magenta: '#d57bff'
+      red: '#ff5680'
+      white: '#c7c7c7'
+      yellow: '#fffc58'
+    primary:
+      background: '#101116'
+      foreground: '#00a2ff'
+    selection:
+      background: '#c1deff'
+      text: '#000000'
+
 #Alacritty:
+
 
 env:
   TERM: alacritty
@@ -13,59 +161,22 @@ window:
 
 font:
   normal:
-    family: Source Code Pro
+    family: Hack 
 
   bold:
-    family: Source Code Pro
+    family: Hack 
 
   italic:
-    family: Source Code Pro
+    family: Hack 
 
   bold_italic:
-    family: Source Code Pro
+    family: Hack 
 
   size: 9
 
-colors:
-  # Default colors
-  primary:
-    background: '#0a0a0a'
-    foreground: '0xeeffff'
+# normal dark theme
+colors: *blue-matrix
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x212121'
-    cursor: '0xeeffff'
-
-  # Normal colors
-  normal:
-    black:   '0x212121'
-    red:     '0xf07178'
-    green:   '0xc3e88d'
-    yellow:  '0xffcb6b'
-    blue:    '0x82aaff'
-    magenta: '0xc792ea'
-    cyan:    '0x89ddff'
-    white:   '0xeeffff'
-
-  # Bright colors
-  bright:
-    black:   '0x4a4a4a'
-    red:     '0xf07178'
-    green:   '0xc3e88d'
-    yellow:  '0xffcb6b'
-    blue:    '0x82aaff'
-    magenta: '0xc792ea'
-    cyan:    '0x89ddff'
-    white:   '0xffffff'
-
-  indexed_colors:
-    - { index: 16, color: '0xf78c6c' }
-    - { index: 17, color: '0xff5370' }
-    - { index: 18, color: '0x303030' }
-    - { index: 19, color: '0x353535' }
-    - { index: 20, color: '0xb2ccd6' }
-    - { index: 21, color: '0xeeffff' }
 
 # background_opacity: 0.80
 background_opacity: 1.00
